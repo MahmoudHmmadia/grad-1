@@ -1,0 +1,36 @@
+@use "./framework/framework";
+@use "./colors/colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&display=swap");
+body {
+  font-family: "Cairo", sans-serif;
+  background: $gradient-cloudy;
+}
+
+.home {
+  position: relative;
+  .shape {
+    .tooth-icon {
+      left: 31%;
+      bottom: -6%;
+      font-size: 80px;
+      @media (max-width: 767px) {
+        left: 50%;
+        bottom: -9%;
+        transform: translateX(-50%);
+      }
+    }
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background-color: #2dc1e4;
+    right: -10%;
+    top: -50%;
+    border-radius: 50%;
+    z-index: -2;
+    @media (max-width: 767px) {
+      left: 50%;
+      top: -50%;
+      transform: translateX(-50%);
+    }
+  }
+}
